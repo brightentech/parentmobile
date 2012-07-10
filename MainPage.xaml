@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="ParentMobile.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        <Grid.Background>
+            <ImageBrush ImageSource="/ParentMobile;component/Assets/cellbkg_login.png" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <Image Height="153" Name="image1" Stretch="Fill" Width="446" Source="/ParentMobile;component/Assets/harmony_main_logo2.png" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel Height="315" HorizontalAlignment="Left" Margin="168,43,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="288">
+                <TextBox Height="71" Name="txtUsername" Text="hikmet okumus" Width="460" />
+                <PasswordBox Height="71" Name="txtPassword" Width="460" Password="harvard" />
+                <Border BorderBrush="Silver" BorderThickness="0" Height="14" Name="border4" Opacity="0" Width="154" />
+                <ListBox Height="94" Name="listBox1" Width="259" BorderBrush="#00293A80" BorderThickness="2" FontSize="30" HorizontalAlignment="Center" Tap="listBox1_Tap" />
+                <Button Content="Login" Height="71" Name="button1" Width="160" HorizontalAlignment="Right" Click="button1_Click" />
+            </StackPanel>
+        </Grid>
+        <StackPanel Height="266" HorizontalAlignment="Left" Margin="20,241,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="152" Grid.RowSpan="2">
+            <Border BorderBrush="Silver" BorderThickness="0" Height="14" Name="border3" Opacity="0" Width="154" />
+            <TextBlock Height="41" Name="textBlock2" Text="Username" Width="147" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="30" />
+            <Border BorderBrush="Silver" BorderThickness="0" Height="30" Name="border1" Width="154" Opacity="0" />
+            <TextBlock FontSize="30" Height="41" Name="textBlock1" Text="Password" Width="147" />
+            <Border BorderBrush="Silver" BorderThickness="0" Height="29" Name="border2" Opacity="0" Width="154" />
+            <TextBlock FontSize="30" Height="40" Name="textBlock3" Text="School" Width="117" HorizontalAlignment="Right" />
+        </StackPanel>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
